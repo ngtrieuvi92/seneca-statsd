@@ -1,0 +1,38 @@
+{
+  "name": "seneca-statsd",
+  "version": "0.0.1",
+  "description": "Send message flow rates to statsd",
+  "main": "statsd.js",
+  "license": "MIT",
+  "author": "Richard Rodger (http://richardrodger.com)",
+  "contributors": [
+    "Richard Rodger (http://richardrodger.com)"
+  ],
+  "scripts": {
+    "test": "lab -P test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rjrodger/seneca-statsd"
+  },
+  "keywords": [
+    "seneca",
+    "plugin",
+    "statsd"
+  ],
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "lab": "11.0.x",
+    "code": "4.0.x",
+    "seneca": "plugin"
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "statsd.js"
+  ]
+}
