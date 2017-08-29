@@ -17,9 +17,11 @@ function statsd (options) {
   var port = options.port || 8125
   var host = options.host || '127.0.0.1'
 
-  seneca.on('act-in', function (msg) {
-    var data = new Buffer('seneca.'+intern.format(msg.meta$.pattern)+':1|c')
-    // console.log(data.toString())
+  seneca.on('act-in', function (msg, reply, meta) {
+    var pattern = meta ? meta.pattern : (msg.meta$ ? msg.meta$.pattern : null)
+    if (null == pattern) return
+    
+    var data = new Buffer('seneca.'+intern.format(pattern)+':1|c')
     client.send(data, 0, data.length, port, host,
                 function(err) { if (err) seneca.log.warn(err) })
 

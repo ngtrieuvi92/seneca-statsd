@@ -1,6 +1,6 @@
 {
   "name": "seneca-statsd",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Send message flow rates to statsd",
   "main": "statsd.js",
   "license": "MIT",
@@ -26,8 +26,8 @@
   "dependencies": {
   },
   "devDependencies": {
-    "lab": "11.0.x",
-    "code": "4.0.x",
+    "lab": "14.0.x",
+    "code": "4.1.x",
     "seneca": "plugin"
   },
   "files": [
